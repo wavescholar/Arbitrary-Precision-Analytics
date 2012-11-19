@@ -310,10 +310,8 @@ int main(int argc, char* argv[])
 			cout<<"x87 status is "<<myStatus87<<" _SW_INEXACT"<<endl;
 		}		
 		cout<<endl<<"Now let's check our answer. "<<endl<<"r*r*r ="<<rootD<<" * "<<rootD<<" * "<<rootD<<" = " <<rootD*rootD*rootD<<endl<<endl;
-		
-		cout<<endl<<"Is that better my boo?  "<<endl<<endl;;
 
-		cout<<"Let's try a long double - that's 128 bit precision. Or is should be"<<endl<<endl;
+		cout<<"Let's try a long double - that's 128 bit precision. Or it should be"<<endl<<endl;
 
 		/*Previous 16-bit versions of Microsoft C/C++ and Microsoft Visual C++ supported the long double, 80-bit precision data type.
 		In Win32 programming, however, the long double data type maps to the double, 64-bit precision data type.The Microsoft run-time 
