@@ -1,5 +1,5 @@
 // ArbitraryPrecisionRootFinder.cpp 
-//Bruce B Campbell 
+// Bruce B Campbell 
 //#define BOOST_MATH_INSTRUMENT
 #include <boost/math/tools/roots.hpp>
 #include <limits>
@@ -212,15 +212,15 @@ using boost::math::ntl::RR;
 int main(int argc, char* argv[])
 {
 	cout<<endl<<endl<<"Put an integer number in  - like 794"<<endl<<endl;
-	double mariIn ;
-	cin>>mariIn;
+	double argIn ;
+	cin>>argIn;
 	do
 	{
-		cout<<"Ok Then we're going to fnd the root of "<<mariIn<<endl;
+		cout<<"Ok Then we're going to fnd the root of "<<argIn<<endl;
 		cout<<"First we're going to clear the floating point error registers on the microprocessor."<<endl<<endl;
 
 		/*
-		First a bit about Floating Point Exceptions
+		Some Background on floating point exceptions
 
 		The IEEE floating point standard defines several exceptions that occur when the result of a floating point operation is unclear or undesirable. 
 		Exceptions can be ignored, in which case some default action is taken, such as returning a special value. 
@@ -276,7 +276,7 @@ int main(int argc, char* argv[])
 		else
 			cout<<"We have no floating point problems Houston SSE and x87 status is "<<myStatus87<<endl<<endl;
 
-		float z = mariIn;
+		float z = argIn;
 		float root =kl_arbitrary_precision_root( z,32 ); 
 		std::cout.precision(std::numeric_limits<float>::digits);
 
@@ -297,7 +297,7 @@ int main(int argc, char* argv[])
 		cout<<"Let's try a double - that's 64 bit precision. "<<endl<<endl;
 
 		_clearfp();
-		double zD= mariIn;
+		double zD= argIn;
 		double rootD = kl_arbitrary_precision_root( zD,64);
 		std::cout.precision(std::numeric_limits<double>::digits);
 
@@ -319,7 +319,7 @@ int main(int argc, char* argv[])
 		are identical to the prototypes for their double counterparts, except that the long double data type replaces the double data type.
 		The long double versions of these functions should not be used in new code. */
 		_clearfp();
-		long double zLD= mariIn;
+		long double zLD= argIn;
 		long double rootLD = kl_arbitrary_precision_root( zLD,128);
 		std::cout.precision(std::numeric_limits<long double>::digits);
 
@@ -356,7 +356,7 @@ int main(int argc, char* argv[])
 		cout<<"How many digits would you like? Enter a good number I tried it up to 2048 significands "<<endl<<endl;
 		unsigned int precision;
 		cin>>precision;
-		cout<<"OK, we're going to use "<<precision<<" significands to calculate the root of "<<mariIn<<endl<<endl;
+		cout<<"OK, we're going to use "<<precision<<" significands to calculate the root of "<<argIn<<endl<<endl;
 
 		/*
 		NTL by Victor Shoup has fixed and arbitrary high precision fixed and floating-point types. 
@@ -384,7 +384,7 @@ int main(int argc, char* argv[])
 		rootRBP.SetPrecision(precision);
 		rootRBP.SetOutputPrecision(precision);
 
-		zRBP = mariIn;
+		zRBP = argIn;
 
 		rootRBP = kl_arbitrary_precision_root( zRBP,precision);
 
@@ -394,9 +394,9 @@ int main(int argc, char* argv[])
 
 		cout<<"Enter anything other than 0 if you want to go again : "<<endl;
 
-		cin>>mariIn;
+		cin>>argIn;
 
-	}while(mariIn>0);
+	}while(argIn>0);
 
 	return 0;
 }
