@@ -278,7 +278,8 @@ int main(int argc, char* argv[])
 
 		float z = argIn;
 		float root =kl_arbitrary_precision_root( z,32 ); 
-		std::cout.precision(std::numeric_limits<float>::digits);
+
+		std::cout.precision(std::numeric_limits<float>::digits10+1);
 
 		cout<<endl<<"Your root is "<<root<<endl<<endl;
 
@@ -296,7 +297,8 @@ int main(int argc, char* argv[])
 		_clearfp();
 		double zD= argIn;
 		double rootD = kl_arbitrary_precision_root( zD,64);
-		std::cout.precision(std::numeric_limits<double>::digits);
+		std::cout.precision(std::numeric_limits<double>::digits10+1);
+		
 
 		cout<<endl<<"Your 64 bit root is "<<rootD<<endl;
 
@@ -318,7 +320,7 @@ int main(int argc, char* argv[])
 		_clearfp();
 		long double zLD= argIn;
 		long double rootLD = kl_arbitrary_precision_root( zLD,128);
-		std::cout.precision(std::numeric_limits<long double>::digits);
+		std::cout.precision(std::numeric_limits<long double>::digits10+1);
 
 		cout<<endl<<"Your 80 bit root is "<<rootLD<<endl<<endl;
 
