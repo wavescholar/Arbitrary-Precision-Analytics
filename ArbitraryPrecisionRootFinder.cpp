@@ -281,7 +281,6 @@ int main(int argc, char* argv[])
 		std::cout.precision(std::numeric_limits<float>::digits);
 
 		cout<<endl<<"Your root is "<<root<<endl<<endl;
-		cout<<endl<<"Nice huh?  "<<endl<<endl;
 
 		myStatus87= _statusfp(); 
 		if (myStatus87 & _SW_INEXACT ) 
@@ -291,8 +290,6 @@ int main(int argc, char* argv[])
 		}
 
 		cout<<endl<<"Now let's check our answer. "<<endl<<"r*r*r ="<<root<<" * "<<root<<" * "<<root<<" = " <<root*root*root<<endl<<endl;
-
-		cout<<"Looks good, but unless you were incredily lucky you got an inexact result.  Homework; under what conditions does the algorithm result in no rounding?"<<endl<<endl;
 
 		cout<<"Let's try a double - that's 64 bit precision. "<<endl<<endl;
 
