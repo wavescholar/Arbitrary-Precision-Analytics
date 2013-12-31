@@ -2,7 +2,7 @@
 
 =============================
 
-Am arbitrary precision root finding library.  Uses boost and NTL.
+An arbitrary precision root finding library.  Uses boost and NTL.
 
 The implementation provided is for cube roots.  
 
