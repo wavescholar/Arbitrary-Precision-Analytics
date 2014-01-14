@@ -1,4 +1,3 @@
-
 #ifndef __kl_arbitrary_precision_root__
 #define __kl_arbitrary_precision_root__
 
@@ -202,7 +201,7 @@ T kl_arbitrary_precision_root(T z, unsigned int precision)
 
    T ans =boost::math::tools::halley_iterate(cbrt_functor<T>(z), guess, min, max, digits);
    return ans;
-   //return tools::halley_iterate(detail::cbrt_functor<T>(z), guess, min, max, digits);
+   
 }
 
 
