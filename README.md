@@ -6,7 +6,7 @@ An arbitrary precision root finding library.  Uses boost and NTL.
 
 The implementation provided is for cube roots.  
 
-Here is the output for the cube root of 794 to 1024 precision.
+Here is a check (using NTL) of the output for the cube root of 794 to 1024 precision; 
 
 9.259911460232221094625793698636637154245268549510110715554379502935598232566421
 93054969787730973482431038572921744007809586133210387850583331352709397212073530
