@@ -22,6 +22,7 @@
     <ProjectGuid>{9DC6C670-5A7D-4893-8BE3-355336996A53}</ProjectGuid>
     <RootNamespace>ArbitraryPrecisionRootFinder</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <ProjectName>ArbitraryPrecisionAnalytics</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -149,7 +150,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>g:\KL\Boost\boost_1_51_0;g:\KL\Boost\WinNTL-5_5_2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\boost_1_51_0\;..\WinNTL-5_5_2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;_WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -170,7 +171,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ArbitraryPrecisionRootFinder.cpp" />
+    <ClCompile Include="ArbitraryPrecisionAnalytics.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kl_arbitrary_precision_root.h" />

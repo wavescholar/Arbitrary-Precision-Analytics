@@ -15,11 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ArbitraryPrecisionRootFinder.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="kl_arbitrary_precision_root.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -27,5 +22,10 @@
   <ItemGroup>
     <Library Include="C:\Program Files (x86)\Intel\Composer XE 2011 SP1\compiler\lib\intel64\libm.lib" />
     <Library Include="C:\Program Files (x86)\Intel\Composer XE 2011 SP1\compiler\lib\intel64\svml_disp.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ArbitraryPrecisionAnalytics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

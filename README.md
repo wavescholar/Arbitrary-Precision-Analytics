@@ -2,7 +2,11 @@
 
 =============================
 
-An arbitrary precision root finding library.  Uses boost and NTL.
+An arbitrary precision library.  Uses boost and NTL.
+
+This repository is the product of some weekend fun.  The purpose was to write a library that implemented some of the boost numerical functions with the arbitrary precision computation provided by NTL. 
+
+You will find example code implementing the Newton Raphson method for calculating the cube root, and the Miler-Rabin primality test. 
 
 The implementation provided is for cube roots.  
 
