@@ -1,8 +1,11 @@
-/*! \mainpage
 
 =============================
 
 An arbitrary precision library.  Uses boost and NTL.
+
+Doxygen code documentation hosed on gh-pages branch at : 
+
+http://wavescholar.github.com/Arbitrary-Precision-Analytics/index.html
 
 This repository is the product of some weekend fun.  The purpose was to write a library that implemented some of the boost numerical functions with the arbitrary precision computation provided by NTL. 
 
