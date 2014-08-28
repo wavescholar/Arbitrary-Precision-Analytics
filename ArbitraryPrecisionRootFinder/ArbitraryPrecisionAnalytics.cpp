@@ -228,6 +228,7 @@ int testMaxCampbellPrime();
 int main(int argc, char* argv[])
 {
 	testMaxCampbellPrime();
+	
 	cout<<endl<<endl<<"Put an integer number in  - like 794"<<endl<<endl;
 	double mariIn ;
 	cin>>mariIn;
@@ -328,10 +329,11 @@ int main(int argc, char* argv[])
 		}		
 		cout<<endl<<"Now let's check our answer. "<<endl<<"r*r*r ="<<rootD<<" * "<<rootD<<" * "<<rootD<<" = " <<rootD*rootD*rootD<<endl<<endl;
 
-		cout<<endl<<"Is that better my boo?  "<<endl<<endl;;
-
 		cout<<"Let's try a long double - that's 128 bit precision. "<<endl<<endl;
 
+		//Note we need the /Qlong-double option to get this to compile. 
+		//note this is not working in debug build yet!
+#ifndef _DEBUG
 		_clearfp();
 		long double zLD= mariIn;
 		long double rootLD = kl_arbitrary_precision_root( zLD,128);
@@ -361,7 +363,7 @@ int main(int argc, char* argv[])
 		The Intel C++ Compiler for x86, on the other hand, enables extended-precision mode by default.		
 		*/
 
-
+#endif
 
 		/*
 		Use Intel Intrinsic to calculate cube root 

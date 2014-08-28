@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
+    <Filter Include="ReleaseLibs">
+      <UniqueIdentifier>{269f818d-3956-49bc-aea1-c79ce7594344}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debug">
+      <UniqueIdentifier>{5f0fdbd3-f68e-490c-b046-c695eee8cab7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kl_arbitrary_precision_root.h">
@@ -22,6 +28,12 @@
   <ItemGroup>
     <Library Include="C:\Program Files (x86)\Intel\Composer XE 2011 SP1\compiler\lib\intel64\libm.lib" />
     <Library Include="C:\Program Files (x86)\Intel\Composer XE 2011 SP1\compiler\lib\intel64\svml_disp.lib" />
+    <Library Include="..\..\x64\Release\ntllib.lib">
+      <Filter>ReleaseLibs</Filter>
+    </Library>
+    <Library Include="..\..\x64\Debug\ntllib.lib">
+      <Filter>Debug</Filter>
+    </Library>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ArbitraryPrecisionAnalytics.cpp">

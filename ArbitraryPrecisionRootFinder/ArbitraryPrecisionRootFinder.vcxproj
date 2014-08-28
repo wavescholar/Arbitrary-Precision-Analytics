@@ -126,8 +126,8 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>g:\KL\Boost\boost_1_51_0;g:\KL\Boost\WinNTL-5_5_2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BOOST_MSVC;WIN64;_WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>d:\packages\boost_1_55_0;d:\packages\WinNTL-5_5_2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -150,7 +150,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\boost_1_51_0\;..\WinNTL-5_5_2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>d:\packages\boost_1_55_0\;d:\packages\WinNTL-5_5_2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;_WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -177,12 +177,12 @@
     <ClInclude Include="kl_arbitrary_precision_root.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WinNTL-5_5_2\ntllib\ntllib.vcxproj">
-      <Project>{d30f894b-8c45-4c28-bfcc-1288009578c5}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
+    <Library Include="..\..\x64\Debug\ntllib.lib">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Library>
+    <Library Include="..\..\x64\Release\ntllib.lib">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </Library>
     <Library Include="C:\Program Files (x86)\Intel\Composer XE 2011 SP1\compiler\lib\intel64\libm.lib" />
     <Library Include="C:\Program Files (x86)\Intel\Composer XE 2011 SP1\compiler\lib\intel64\svml_disp.lib" />
   </ItemGroup>

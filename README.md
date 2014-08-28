@@ -1,17 +1,17 @@
 
 =============================
 
-An arbitrary precision library.  Uses boost and NTL.
+Arbitrary precision root finding with boost and NTL.
 
 Doxygen code documentation hosed on gh-pages branch at : 
 
 http://wavescholar.github.com/Arbitrary-Precision-Analytics/index.html
 
-This repository is the product of some weekend fun.  The purpose was to write a library that implemented some of the boost numerical functions with the arbitrary precision computation provided by NTL. 
+This repository is a small project to write a library that instrumented some of the boost numerical functions with the arbitrary precision computation provided by NTL. 
 
-You will find example code implementing the Newton Raphson method for calculating the cube root, and the Miler-Rabin primality test. 
+You will find example code implementing the Newton Raphson method for calculating roots, and the Miler-Rabin primality test. 
 
-The implementation provided is for cube roots.  
+This version uses boost 1.51.0 and NTL 5.5.2.  These are located for convenience in the Packages repository. 
 
 Here is a check (using NTL) of the output for the cube root of 794 to 1024 precision; 
 
